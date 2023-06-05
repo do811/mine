@@ -4,7 +4,7 @@
 int main(void) {
 	short vary,t,count=0;
 	srand((unsigned int)time(NULL));
-	printf("ìÔà’ìx0Å`10\n");
+	printf("Èõ£ÊòìÂ∫¶0ÔΩû10\n");
 	scanf("%hd", &t);
 	t = 12 - t;
 	short num[40][40], already[40][40], x = -1, y = -1;
@@ -17,25 +17,26 @@ int main(void) {
 			num[r][e] =vary;
 		}
 	}
-	printf("  0");
-	for (int r = 0; r < 4; r++) {
-		for (int e = 1; e < 10;e++) {
-				printf("%d", e);
-		}
-		printf("0");
-	}
-	printf("\n");
 	int bread = 1, counter = 0;
 	int a,breaker=0,on=0;
 	short bomcounter = 0;
+
 	for (int q = 0; q < bread; q++) {
+		printf("  0");
+		for (int u = 0; u < 4; u++) {
+			for (int r = 1; r < 10; r++) {
+				printf("%d", r);
+			}
+			printf("0");
+		}
+		printf("\n");
 		for (int i = 0; i < 20; i++) {
 			if (i < 10) {
 				printf("%d ", i);
-			}
-			else {
+			}else{
 				printf("%d", i);
 			}
+			
 			for (int j = 0; j < 40; j++) {
 
 				if (on) {
@@ -57,7 +58,7 @@ int main(void) {
 				}
 				else if (already[y][x] == 0 && x + 1 >= j && j >= x - 1 && y + 1 >= i && i >= y - 1 || (j == x && i == y || already[i + 20][j] == 0)) {
 					 if (already[i][j]==0) {
-						 printf("Å†");
+						 printf("‚ñ°");
 						 already[i + 20][j] = 0;
 					 }
 					 else {
@@ -65,10 +66,10 @@ int main(void) {
 						 already[i + 20][j] = 0;
 					 }
 				 } else if (already[i][j] == 0 && already[i+20][j]==0) {
-						printf("Å†");
+						printf("‚ñ°");
 				}
 				else {
-						printf("Å°");
+						printf("‚ñ†");
 				}
 				bomcounter = 0;
 			}				printf("\n");
@@ -80,7 +81,7 @@ int main(void) {
 			breaker = 2;
 			for (int q = 1; q < breaker; q++) {
 				if (x > 40 || y > 20) {
-					printf("0<x<40,0<y<20Ç≈Ç®äËÇ¢ÇµÇ‹Ç∑");
+					printf("0<x<40,0<y<20„Åß„ÅäÈ°ò„ÅÑ„Åó„Åæ„Åô");
 					scanf("%hd%hd", &x, &y);
 					breaker++;
 				}
@@ -109,11 +110,11 @@ int main(void) {
 					printf("L");
 				}
 				else if (num[i][j] == 1) {
-					printf("Å°");
+					printf("‚ñ†");
 				}
 				else
 				{
-					printf("Å†");
+					printf("‚ñ°");
 				}
 			}
 			printf("\n");
